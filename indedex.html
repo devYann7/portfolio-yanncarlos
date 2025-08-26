@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yann Carlos | Front-End Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* RESET BÁSICO */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    /* CABEÇALHO */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #111111;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #00bfff;
+      z-index: 1000;
+      transition: 0.3s;
+    }
+
+    header:hover {
+      background-color: #0d0d0d;
+    }
+
+    header h1 {
+      color: #00bfff;
+      font-size: 1.8em;
+    }
+
+    nav a {
+      margin-left: 25px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    section {
+      padding: 100px 50px 60px 50px;
+    }
+
+    .section-title {
+      font-size: 2.2em;
+      color: #00bfff;
+      margin-bottom: 25px;
+      border-bottom: 3px solid #00bfff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* SOBRE */
+    #about p {
+      margin-top: 20px;
+      line-height: 1.7;
+      font-size: 1.1em;
+      max-width: 700px;
+    }
+
+    /* HABILIDADES */
+    .skills {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .skill {
+      background-color: #111111;
+      padding: 15px 25px;
+      border: 2px solid #00bfff;
+      border-radius: 10px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      background-color: #00bfff;
+      color: #111111;
+      transform: scale(1.05);
+    }
+
+    /* PROJETOS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project {
+      background-color: #111111;
+      border: 2px solid #00bfff;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #00bfff;
+    }
+
+    .project img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 18px;
+    }
+
+    .project-content h3 {
+      margin-bottom: 10px;
+      color: #00bfff;
+    }
+
+    .project-content p {
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+
+    /* CONTATO */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 450px;
+    }
+
+    form input, form textarea {
+      padding: 12px;
+      border: 2px solid #00bfff;
+      border-radius: 8px;
+      background-color: #111111;
+      color: #fff;
+      font-size: 1em;
+      transition: 0.3s;
+    }
+
+    form input:focus, form textarea:focus {
+      outline: none;
+      border-color: #ffffff;
+      transform: scale(1.02);
+    }
+
+    form button {
+      padding: 14px;
+      background-color: #00bfff;
+      border: none;
+      border-radius: 8px;
+      color: #111111;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background-color: #009acd;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #111111;
+      padding: 25px 50px;
+      text-align: center;
+      border-top: 2px solid #00bfff;
+      margin-top: 50px;
+    }
+
+    /* RESPONSIVO */
+    @media(max-width: 768px){
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav a {
+        margin: 10px 10px 0 0;
+      }
+      section {
+        padding: 100px 30px 60px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <h1>Yann Carlos</h1>
+    <nav>
+      <a href="#about">Sobre</a>
+      <a href="#skills">Habilidades</a>
+      <a href="#projects">Projetos</a>
+      <a href="#contact">Contato</a>
+    </nav>
+  </header>
+
+  <!-- SOBRE -->
+  <section id="about">
+    <h2 class="section-title">Sobre</h2>
+    <p>Olá! Eu sou <strong>Yann Carlos</strong>, desenvolvedor Front-End júnior e estudante de ADS. Crio experiências web modernas, responsivas e interativas usando HTML, CSS e JavaScript. Estou sempre aprendendo e buscando aprimorar minhas habilidades para construir interfaces incríveis e funcionais.</p>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="skills">
+    <h2 class="section-title">Habilidades</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Responsive Design</div>
+      <div class="skill">Git / GitHub</div>
+      <div class="skill">UI/UX Basics</div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projects">
+    <h2 class="section-title">Projetos</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="https://via.placeholder.com/300x170" alt="Portfolio Pessoal">
+        <div class="project-content">
+          <h3>Portfolio Pessoal</h3>
+          <p>Portfólio responsivo com HTML, CSS e JavaScript, mostrando meus projetos e habilidades.</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/300x170" alt="Landing Page">
+        <div class="project-content">
+          <h3>Landing Page</h3>
+          <p>Landing page moderna para um serviço fictício, totalmente responsiva e estilosa.</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/300x170" alt="ToDo List">
+        <div class="project-content">
+          <h3>ToDo List</h3>
+          <p>Aplicativo de tarefas usando JavaScript puro, com interface limpa e interativa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contact">
+    <h2 class="section-title">Contato</h2>
+    <form>
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu email" required>
+      <textarea rows="5" placeholder="Mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p style="margin-top:20px;">Ou me contate diretamente: <a href="mailto:yann@email.com">yann@email.com</a> | +55 99 99999-9999</p>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    &copy; 2025 Yann Carlos. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
